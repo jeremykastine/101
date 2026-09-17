@@ -1,318 +1,153 @@
 # MATH 101 Final Exam Specifications
 
 ## Purpose
-
-This is the standing specification for generating MATH 101 (College Algebra) final exams. A future request such as "create a new MATH 101 final" or "create ten versions" should use this document unless the user explicitly changes a rule.
+Standing specification for generating MATH 101 (College Algebra) final exams. Use this unless a later instruction explicitly changes a rule.
 
 ## Global structure
-
-- The final contains exactly **10 main questions**, one from each problem type below.
-- The exam is worth **100 points total**; each main question is worth **10 points**.
-- A question may have multiple parts, but all parts should stay on that question's main topic.
-- The **presentation order may be randomized by default**. The numbered problem types below are content categories, not a required presentation order.
-- If a future request specifies an order, that instruction overrides randomization.
-- Students may use a **basic four-function calculator only**. Scientific, graphing, CAS, and calculator-app functions are not intended to be used.
-- Problems should favor exact answers and clean arithmetic. Do not require logarithm approximations or calculator features beyond four-function arithmetic.
+- Exactly **10 main questions**, one from each problem type below.
+- **100 points total; 10 points per main question.** A question may have multiple parts, but all parts stay on one topic.
+- Presentation order is **randomized by default** unless explicitly fixed.
+- Students may use a **basic four-function calculator only**. No scientific, graphing, CAS, or calculator-app functions.
+- Favor exact answers and clean arithmetic; do not require numerical logarithm approximations.
+- Balance difficulty at the **whole-exam level**. If one randomized item is harder than average for its type, offset it with easier approved items elsewhere. Avoid several upper-end items on the same version.
 
 ## Version identifiers
+- Do not use lettered labels such as Version A/B.
+- Single version: `YYYYMMDDHHMM` using the user's local time, 24-hour clock, nearest minute, no punctuation.
+- Batch versions: same timestamp plus `.1`, `.2`, `.3`, etc.
+- Use the same identifier on the exam, answer sheet, answer key, and filename when practical.
 
-- Do not use generic labels such as `Version A`, `Version B`, etc.
-- A normally generated single exam version should use a **12-digit timestamp identifier** in the format `YYYYMMDDHHMM`, using the user's local date and time and a 24-hour clock. The timestamp is encoded to the nearest minute and contains **no punctuation**.
-- Example: September 17, 2026 at 4:22 PM becomes `202609171622`.
-- Display this identifier wherever the version identifier appears, including the exam booklet, student answer sheet, answer key, and combined-PDF labeling/filename when practical.
-- If multiple exam versions are generated together from the same request, use the same 12-digit base timestamp and append sequential suffixes `.1`, `.2`, `.3`, and so on. Example: `202609171622.1`, `202609171622.2`, `202609171622.3`.
-- The base timestamp itself remains punctuation-free; the decimal-style suffix is used only to distinguish multiple versions generated as one batch.
+## Exam booklet
+- Do **not** print point values in the exam booklet unless specifically requested.
+- Keep prompts compact. Short feature lists should usually be written in one sentence rather than one item per line.
+- Keep vertical subparts only when they represent meaningfully different procedures or a deliberate sequence of work.
+- Multiple-choice options may remain vertical when clearer.
 
-## Difficulty balancing across randomized versions
+## Student answer sheet and answer key
+Every version must include a student answer sheet and a paired answer key.
 
-Randomization will cause small natural differences in item difficulty. Balance difficulty at the **whole-exam level**.
+### Content and scoring
+- The answer sheet contains **no problem statements**.
+- Include version identifier, **student name**, question numbers, concise part labels, point values, and answer lines/boxes.
+- **Do not include a section/course-section field.** Only one section is being taught.
+- Follow the actual randomized numbering/order of that version.
+- Each main question visibly totals 10 points. Multipart point values sum to 10.
+- For a single-part 10-point question, show the question once with `10 points`; do not invent a redundant A/1 subpart or second 10-point label.
 
-- Keep every item within the approved range for its problem type.
-- If one selected item is on the harder end for its type, balance the version with one or more items on the easier end of their approved ranges.
-- If several selected items are simultaneously near the upper end, revise the version rather than allowing the whole test to become substantially harder.
-- Consider both conceptual difficulty and expected algebraic workload.
-- Avoid accidental arithmetic complexity and extreme outliers.
+### Row geometry
+- Left part labels/descriptors occupy a narrow left column; point values occupy a narrow right column.
+- For multipart rows, the writing line runs essentially the **full width between the left label and right point value**.
+- Do not leave a short isolated blank in the middle of a row.
+- Use **solid horizontal rules only between main questions**.
+- Use **dashed horizontal rules only between successive parts of the same question**.
+- Dashed rules occur only *between* parts: 2 parts -> 1 dashed rule; 3 parts -> 2; 4 parts -> 3.
+- No dashed rule after the final part, and none at all for a single-part question.
+- Never stack a dashed rule and solid question rule beneath the same final response area.
 
-## Scoring, exam booklet, answer sheet, and key
+### Key-first matched layout
+- Build the **answer key first** as the canonical layout.
+- The student sheet must be generated from the same source/template, with identical page breaks, row heights, spacing, line lengths, labels, and point-value positions.
+- Preferred method: hide the answer text (e.g. white text) while preserving its dimensions.
+- The key is a concise grading reference, not a worked-solutions document unless separately requested.
 
-### Scoring
+## Combined duplex-safe deliverable
+By default, deliver **one combined PDF per version** in this order:
+1. Exam booklet
+2. Student answer sheet
+3. Answer key
 
-- Each main question is worth exactly 10 points.
-- Every version must have a complete subpart scoring plan whose subparts sum to 10 points for each main question.
-- Prefer whole-number point values; half-points are acceptable when appropriate (for example, four matches worth 2.5 points each).
-- Point weights should reflect reasoning/work, not merely the number of blanks.
-
-### Exam booklet
-
-- **Do not print point values in the exam booklet by default.** Do not place `10 points`, `[2 pts]`, or similar annotations beside questions or parts unless explicitly requested later.
-- Keep the exam booklet compact and readable. The answer sheet is the canonical place for detailed part labels and scoring.
-- Do not vertically list a sequence of one- or two-word requested features merely because each has a separate answer-sheet row. Prefer concise prose such as: `Give the domain, range, x-intercept, y-intercept, and end behavior.`
-- Keep vertical subparts when the parts represent meaningfully different procedures or a deliberate sequence of work, such as Rational Root Theorem -> candidate testing -> long division -> quadratic formula.
-- Multiple-choice choices may remain vertical when clearer.
-- Condense repeated wording and unnecessary whitespace without removing useful scratch-work space or making directions ambiguous.
-
-### Student answer sheet
-
-Every exam version must include a version-specific student answer sheet.
-
-- Do not repeat problem statements.
-- Include the version identifier, student-name area, question numbers, concise part labels, point values, and appropriately sized answer lines/boxes.
-- Follow the actual randomized presentation order and numbering of that exam version.
-- Each main question must visibly total 10 points. For a question with multiple parts, each part must show its own point value and the parts must sum to 10.
-- **Do not create a redundant subpart for a single-part question.** If the entire question has only one response worth 10 points, show the question once with `10 points`; do not place a second `10 points` label beneath it or invent an `A`, `1`, or other part label solely for scoring.
-- Concise labels such as `Domain`, `Range`, `Vertical asymptote`, `Choice`, `Graph I`, and `Solutions` are appropriate.
-- For multipart rows labeled `A`, `B`, `C`, etc., `1`, `2`, `3`, etc., or similar part markers, the writing line should run essentially the **full usable width of the row**: begin immediately after the left-side part label/descriptor and continue all the way to just before the right-aligned point value. Do not leave a short isolated blank near the middle of the row.
-- The same full-width-line rule applies between successive part labels and between different point values so that it is visually obvious which line belongs to which part.
-- Keep the left part labels aligned in a narrow column and the point values aligned in a narrow right column, with the answer line filling the space between them.
-- Use **solid horizontal separator lines only between main questions**.
-- Use **dashed horizontal separator lines only between successive parts within the same main question** so part boundaries are visually distinct from question boundaries.
-- A dashed part separator belongs **between** parts, not after them: a two-part question has one dashed separator, a three-part question has two, a four-part question has three, and so on.
-- Do **not** draw a dashed separator below the final part of a multipart question; the solid separator for the next main question already provides the lower boundary.
-- For a single-part question, do **not** draw any internal dashed separator at all; use only the main-question boundary structure.
-- Avoid stacked or duplicate horizontal rules. There should never be both a dashed internal-part rule and a solid main-question rule immediately beneath the same final response area.
-
-### Paired answer key
-
-Every exam version must also include a paired answer key.
-
-- Build the **answer key first as the canonical layout template**.
-- The key contains expected final answers in the same answer locations as the student sheet.
-- It is primarily a grading/reference sheet, not a worked-solutions document unless worked solutions are separately requested.
-- Equivalent acceptable forms may be noted briefly if they fit without changing the layout.
-
-### Exact answer-sheet/key layout matching
-
-The student answer sheet and answer key must come from the **same layout source/template**.
-
-- Their page count, page breaks, question placement, line lengths, row heights, spacing, left-side part labels, full-width answer lines, and right-side point-value alignment must match.
-- Preferred method: typeset the complete answer key and create the student version from the same source with answer text hidden while preserving dimensions. White answer text is acceptable.
-- Do not independently recreate the blank answer sheet after designing the key.
-- Visually verify page-for-page alignment before delivery.
-- When multiple exam versions are generated, each version receives its own matching answer sheet/key and clear version identifier.
-
-### Combined deliverable and duplex-safe printing
-
-By default, deliver each exam version as **one combined PDF**, not as three separate PDFs. The combined PDF must contain these three sections in this order:
-
-1. **Exam booklet**
-2. **Student answer sheet**
-3. **Answer key**
-
-The PDF must be laid out for ordinary two-sided/duplex printing so that no section begins on the back side of the final sheet of the preceding section.
-
-- Each of the three sections must begin on an **odd-numbered PDF page**, i.e. the front side of a fresh physical sheet when printed duplex starting with page 1 as a front side.
-- If the exam booklet has an odd number of pages, insert a completely blank padding page after it so the student answer sheet begins on a new sheet.
-- The student answer sheet should occupy **exactly one physical sheet, front and back (2 PDF pages)**. Keep its layout compact enough to preserve this two-page requirement.
-- The answer key should likewise occupy **exactly one physical sheet, front and back (2 PDF pages)** and must remain geometrically identical to the answer sheet as specified above.
-- Because the answer sheet and key are each two pages, the answer key will naturally begin on a new front side when the answer sheet begins on a front side. If any future layout change would alter this, add blank padding as needed so the key still begins on an odd-numbered page.
-- Padding pages must be truly blank or unobtrusively marked as intentionally blank; they must not contain exam, answer-sheet, or answer-key content.
-- When multiple versions are generated, create one duplex-safe combined PDF per version unless the user explicitly requests a different packaging format.
+Printing rules:
+- Each section begins on an **odd-numbered PDF page**, i.e. the front of a fresh duplex sheet.
+- Insert a blank padding page after the exam if needed.
+- Student answer sheet is exactly **2 PDF pages** (one sheet front/back).
+- Answer key is exactly **2 PDF pages** and geometrically identical to the answer sheet.
+- Add padding if ever needed so the key also starts on a fresh front side.
 
 ---
 
 # Required Problem Types
 
-## Problem Type 1 - Composition of Functions
-**Textbook:** 3.4
+## 1. Composition of Functions — Section 3.4
+Multiple-choice recognition. Give `h(x)` naturally expressible as `f(g(x))`; choices propose pairs `f,g`. Student identifies the correct inside/outside functions. Distractors may reverse composition or misplace constants/coefficients.
 
-Multiple-choice recognition problem. Give a function `h(x)` naturally viewed as a composition and several proposed pairs `f`, `g`; the student chooses the pair satisfying `h(x)=f(g(x))`.
+## 2. Transformations from Graphs — Section 3.5
+Show original `y=f(x)` and transformed `y=g(x)` on the same coordinate plane, with no algebraic formula for the original. Multiple choice asks for `g` in terms of `f`.
 
-The skill is recognizing the inside and outside functions, not merely carrying out a specified composition. Good examples include `h(x)=sqrt(3x+7)` or `h(x)=(2x-5)^4`. Distractors may reverse inside/outside functions, misplace coefficients/constants, or confuse `f o g` with `g o f`.
+Approved families:
+- horizontal/vertical translations (may combine with each other);
+- vertical stretch/compression and/or x-axis reflection;
+- horizontal stretch/compression and/or y-axis reflection.
+Do not combine vertical and horizontal scaling/reflection families, and do not combine those families with translations unless later changed. Use an asymmetric graph.
 
-## Problem Type 2 - Transformations of Functions from Graphs
-**Textbook:** 3.5
+## 3. Construct Polynomial from Graph — Section 5.3
+Give a degree 3–5 polynomial graph. All real zeros and multiplicities must be visually clear, plus one labeled point to determine leading constant `a`. Student writes the polynomial, preferably factored. Choose data so `a` is an integer or simple fraction.
 
-Show two graphs on the same coordinate plane: original `y=f(x)` and transformed `y=g(x)`. Do not give an algebraic formula for the original. Ask the student to choose the correct function-notation relationship between `g` and `f`.
-
-Approved transformation families:
-
-1. translations: horizontal, vertical, or both;
-2. vertical transformations: stretch/compression, x-axis reflection, or both;
-3. horizontal transformations: stretch/compression, y-axis reflection, or both.
-
-Do not combine vertical and horizontal transformation families in the same item. Do not combine scaling/reflection with translations unless this specification is later changed. Use an asymmetric/distinctive graph so the relationship is visually unambiguous.
-
-## Problem Type 3 - Constructing a Polynomial from Its Graph
-**Textbook:** 5.3
-
-Give the graph of a degree 3, 4, or 5 polynomial. The student writes its algebraic definition, preferably in factored form.
-
-The graph must show all real zeros clearly, make multiplicities visually identifiable by crossing/touching behavior, and include one additional labeled point to determine the leading constant `a`.
-
-Expected reasoning: read zeros -> infer multiplicities -> write `a` times the corresponding factors -> use the additional point to solve for `a`. Choose zeros and the extra point so `a` is an integer or simple fraction.
-
-## Problem Type 4 - Finding All Zeros of a Polynomial
-**Textbook:** 5.5
-
-Give a third- or fourth-degree polynomial with exactly two real irrational roots and either one rational root (degree 3) or two rational roots (degree 4).
-
-Students must:
-
-1. list **all possible rational zeros** using the Rational Root Theorem;
-2. test only a small subset explicitly supplied by the problem;
-3. identify the actual rational zero(s);
+## 4. Find All Polynomial Zeros — Section 5.5
+Degree 3 or 4 polynomial with exactly two real irrational roots plus one rational root (degree 3) or two rational roots (degree 4).
+Student must:
+1. list all Rational Root Theorem candidates;
+2. test only a small subset supplied by the problem;
+3. identify rational root(s);
 4. use **polynomial long division** to reduce to a quadratic;
-5. use the **quadratic formula** to obtain the final two irrational roots.
+5. use the **quadratic formula** for the final two roots.
+Remaining quadratic has positive nonsquare discriminant; no complex final roots.
 
-The remaining quadratic must have a positive nonsquare discriminant. Do not use complex final roots. The candidate-testing subset prevents repetitive substitution while still requiring the full Rational Root Theorem candidate list.
+## 5. Rational Function Behavior — Section 5.6
+Choose one comparable form:
 
-## Problem Type 5 - Behavior of Rational Functions
-**Textbook:** 5.6
+**Form A:** numerator/denominator already fully factored; no slant asymptote; may include a hole. Ask for relevant domain, hole, vertical/horizontal asymptotes/end behavior, and intercepts.
 
-Choose one of two comparable forms.
+**Form B:** no hole; simple unfactored degree-2 numerator over degree-1 denominator; student uses polynomial division for a slant asymptote. Do not add difficult factoring.
 
-### Form A - factored, non-slant
+## 6. Radical Function Analysis — Section 5.7
+Give a transformed square-root function. Ask for domain, range, x-intercept, y-intercept when applicable, and end behavior. Choose clean exact values. Prompt may be one compact sentence.
 
-- Numerator and denominator are already completely factored.
-- No slant asymptote; use horizontal/other non-slant end behavior.
-- A hole may be included and is useful.
-- Typical requested features: domain, hole, vertical asymptote(s), horizontal asymptote/end behavior, x-intercept(s), y-intercept.
+## 7. Exponential Graph Matching — Section 6.2
+Show four `a b^x` graphs on one coordinate plane and four algebraic functions. No horizontal/vertical shifts. Students distinguish `a`, growth vs decay, and relative rates.
 
-### Form B - simple unfactored with slant asymptote
+Graph style:
+- all four curves use the **same solid-line style**;
+- label curves **A, B, C, D at both the far left and far right edges** of the graph window;
+- choose the window so labels are unambiguous;
+- do not make the task solvable merely by separating growth from decay.
 
-- No hole.
-- Degree 2 numerator and degree 1 denominator.
-- Simple coefficients.
-- Student uses polynomial division to find the slant asymptote.
-- Typical requested features: domain, vertical asymptote, slant asymptote, intercepts, end behavior.
+## 8. Transformed Logarithmic Function — Section 6.4
+Give a transformed logarithmic function. Ask for domain, range, vertical asymptote, x-intercept, and end behavior. Choose values so the x-intercept is exact and corresponds to a familiar power of the base. No decimal log approximation.
 
-Do not make Form B simultaneously hard to factor or hide a hole. Its extra burden should mainly be polynomial division.
+## 9. Logarithmic Properties — Section 6.5
+Short exact-evaluation items using product, quotient, power, and/or change-of-base properties. The property must make a real difference: individual logs should not already be easy by inspection. Prefer decimal common-log patterns that combine to powers of 10. Change-of-base items remain exact and hand-solvable. Usually one or two properties per subproblem.
 
-## Problem Type 6 - Radical Function Analysis
-**Textbook:** 5.7, radical-function portion
+## 10. Equation / Nonlinear-System Solving
+Choose top-level category with equal probability:
+- 25% radical equation
+- 25% exponential equation
+- 25% logarithmic equation
+- 25% nonlinear system
+Subtypes within a category are equally likely.
 
-Give a transformed square-root function algebraically. Ask for the **domain, range, x-intercept, y-intercept (when one exists), and end behavior**. In the exam booklet these may be requested compactly in one sentence; the answer sheet contains the separate labeled rows and points.
+### 10A Radical equation — Section 5.7
+Always exactly **one radical**; never two-radical equations.
+- 50%: easy isolation -> quadratic -> two candidates, exactly one extraneous.
+- 50%: one radical -> quadratic -> both solutions valid.
 
-Choose parameters so endpoints/intercepts are clean and exactly computable. Reflections and shifts are allowed.
+### 10B Exponential equation — Section 6.6
+Different-looking bases that rewrite to a common base; equate exponents. No logarithms required. Preferred level: `8^(x-1)=4^(x+1)`.
 
-## Problem Type 7 - Matching Exponential Functions to Graphs
-**Textbook:** 6.2
-
-Show four exponential curves on the **same coordinate plane** and give four algebraic functions to match to them. Use basic functions of the form `f(x)=a b^x` with no horizontal or vertical shifts.
-
-Students should distinguish effects such as `a` determining the y-intercept, `b>1` versus `0<b<1`, and different growth/decay rates. Prefer positive `a` unless changed later.
-
-### Graph-style rule
-
-- Draw **all four curves with the same solid-line style**. Do not distinguish them by dashed, dotted, dash-dotted, color-dependent, or other differing line styles.
-- Identify curves by labeling them **A, B, C, and D at both the far left and the far right edges of the graphing window**, adjacent to their respective curves. Each curve therefore carries the same letter at both edges.
-- Choose the functions and graphing window so the A-D edge labels are clearly separated and unambiguously associated with the curves.
-- Do not make the matching solvable merely by separating growth from decay; students should need to distinguish both `a` and `b`.
-
-## Problem Type 8 - Analysis of a Transformed Logarithmic Function
-**Textbook:** 6.4
-
-Give a transformed logarithmic function algebraically. Ask for features such as **domain, range, vertical asymptote, x-intercept, and end behavior**. In the exam booklet these may be requested in one compact sentence.
-
-Choose base/shifts so the x-intercept is exact and reduces to a familiar power of the base. Do not require decimal log approximations. This problem is about logarithmic function behavior, not logarithm-property manipulation.
-
-## Problem Type 9 - Logarithmic Properties and Exact Evaluation
-**Textbook:** 6.5
-
-Give one or more short exact-evaluation items using logarithmic properties. The application of the properties must make a **real difference**: avoid items whose individual logarithms are already easy to evaluate by inspection.
-
-Approved properties: product, quotient, power, change of base. Individual subproblems should normally require only one or two properties.
-
-Preferred common-log decimal patterns include expressions like:
-
-- `log(0.2)+log(50)` -> `log(10)`;
-- `log(7.5)-log(0.075)` -> `log(100)`;
-- `2log(0.5)+log(400)` -> `log(100)`.
-
-A change-of-base item must remain exact and hand-solvable, e.g. `log_4(8)=log(8)/log(4)=3/2`. Do not provide tables of log values and do not require numerical logarithm approximations.
-
-## Problem Type 10 - Equation or Nonlinear-System Solving
-
-This is the catch-all solving problem. For a randomly generated version, select the category with equal probability:
-
-- **25% radical equation**
-- **25% exponential equation**
-- **25% logarithmic equation**
-- **25% nonlinear system**
-
-If the selected category has subtypes, choose among them with equal probability.
-
-### 10A - Radical equation
-**Textbook:** 5.7
-
-Always use exactly **one radical**. Never use two-radical equations.
-
-Two equally likely subtypes:
-
-1. **Extraneous-solution subtype:** one radical is isolated/easy to isolate; squaring gives a factorable quadratic with two candidates; exactly one is extraneous and must be rejected by checking the original equation. Example structure: `sqrt(2x+3)=x`.
-2. **Both-valid subtype:** one radical; squaring gives a quadratic; both solutions satisfy the original. Example structure: `sqrt(7x-3)=x+1`.
-
-### 10B - Exponential equation
-**Textbook:** 6.6
-
-Use different-looking bases that can be rewritten using a common base. No logarithms or scientific calculator should be needed. Preferred structure: `8^(x-1)=4^(x+1)`, then rewrite to a common base and equate exponents.
-
-### 10C - Logarithmic equation
-**Textbook:** 6.6
-
-The equation should be relatively straightforward but require **one logarithmic property** before conversion to exponential form.
-
-Three equally likely subtypes:
-
-1. product property leading to a linear equation, e.g. `log_5(x-1)+log_5(5)=2`;
-2. quotient property leading to a linear equation, e.g. `log_3(x+6)-log_3(x)=1`;
-3. product property leading to a quadratic plus domain rejection, e.g. `log_2(x)+log_2(x-2)=3`.
-
+### 10C Logarithmic equation — Section 6.6
+Require exactly one logarithmic property before converting to exponential form. Three equally likely subtypes:
+1. product property -> linear equation;
+2. quotient property -> linear equation;
+3. product property -> quadratic plus domain rejection.
 No scientific-calculator approximation.
 
-### 10D - Nonlinear system
-**Textbook:** 7.3
-
+### 10D Nonlinear system — Section 7.3
 Two equally likely subtypes:
+1. line + parabola;
+2. line + circle.
+Solve algebraically by substitution/equivalent method, normally with two intersections. Exclude unnecessary quartics, cases where one variable is simply given as a constant, and ordinary linear systems.
 
-1. **line + parabola**, solved algebraically by substitution/equivalent method, normally producing two intersections; the resulting quadratic may factor or require the quadratic formula;
-2. **line + circle**, solved by substitution, with a manageable quadratic and normally two intersections.
+## Coverage philosophy
+The final emphasizes function-centered College Algebra. Quadratic equations and ordinary linear systems are prerequisite material rather than dedicated final topics, though quadratic solving may appear as a supporting skill. Domain/range are embedded in function-analysis questions.
 
-Exclude systems producing unnecessary quartics, systems where one variable is simply given as a constant (too trivial), and ordinary linear systems. Linear equations/systems are prerequisite material rather than a final-exam focus.
-
----
-
-# Coverage philosophy
-
-The final intentionally emphasizes function-centered College Algebra content rather than sampling every textbook section equally. Quadratic equations and ordinary linear systems do not receive dedicated questions because they are treated as prerequisite material, though quadratic solving may appear as a supporting skill in polynomial zeros, radical equations, or nonlinear systems. Domain/range are embedded naturally in function-analysis questions rather than receiving a separate problem.
-
-Primary coverage: composition; transformations; polynomial graphs and zeros; rational functions; radical functions; exponential graphs; logarithmic functions; logarithm properties; and one randomized equation/system-solving item.
-
-# Generation checklist
-
-Before finalizing any version, verify:
-
-1. exactly 10 required problem types, one each;
-2. order randomized unless explicitly fixed;
-3. Problem Type 10 obeys 25/25/25/25 category probability when randomness is requested;
-4. Problem Type 10 subtypes are equally likely within their category;
-5. exam is solvable with at most a four-function calculator;
-6. no item accidentally requires scientific/graphing/CAS features;
-7. graphs are legible and intended features are unambiguous;
-8. exponential matching uses four same-style solid curves with A-D labels at both left and right edges;
-9. multiple-choice distractors are plausible and clearly incorrect;
-10. exact values are used wherever possible;
-11. Rational Root Theorem item requires all candidates but provides a limited subset to test;
-12. polynomial-zero item uses long division and ends in a quadratic with two real irrational roots;
-13. rational-function item conforms to approved Form A or Form B;
-14. radical/logarithmic function-analysis prompts use clean exact features;
-15. logarithm-property items genuinely benefit from the properties;
-16. whole-exam difficulty/workload is balanced across randomized selections;
-17. each main question is worth 10 points, total 100;
-18. exam booklet omits point annotations by default;
-19. short feature lists are condensed in the exam booklet when appropriate;
-20. answer sheet/key show the complete subpart scoring plan;
-21. version-specific answer sheet and key are generated from the same layout template;
-22. answer sheet contains no problem statements;
-23. key and answer sheet have matching page count, page breaks, spacing, and answer-line geometry;
-24. exam, answer sheet, and key share the same version identifier;
-25. final delivery is one combined PDF in the order exam -> answer sheet -> answer key;
-26. each section begins on an odd-numbered PDF page/front side of a fresh duplex sheet;
-27. blank padding pages are inserted wherever needed to prevent one section from printing on the back of another;
-28. answer sheet is exactly 2 pages and answer key is exactly 2 pages;
-29. version identifier uses `YYYYMMDDHHMM` rather than a lettered version label;
-30. if multiple versions are generated in one batch, they use the same timestamp plus `.1`, `.2`, `.3`, etc. suffixes.
-31. answer-sheet/key separators use solid rules between main questions and dashed rules only between internal parts;
-32. no dashed separator appears after the final part or in a single-part question, and no duplicate/stacked horizontal rules remain.
-33. multipart answer-sheet/key rows use full-width response lines from the part label to just before the right-aligned point value;
-34. single-part 10-point questions are not redundantly broken into a one-item subpart with a second 10-point label.
+## Generation checklist
+Before finalizing, verify all 10 problem types appear once; default order is randomized; Question 10 probabilities/subtype probabilities are respected; four-function-calculator limit is honored; graphs are legible; exponential graph labels follow the A–D solid-curve rule; exact values are used where possible; Q4 uses RRT + limited testing + long division + quadratic formula; Q5 uses approved Form A/B; log-property items genuinely benefit from the properties; whole-exam difficulty is balanced; scoring totals 100; exam booklet omits points; answer sheet/key are key-first matched layouts with full-width response lines; solid rules separate questions and dashed rules only separate internal parts; no redundant separators or single-part sublabels; **no section field appears**; version IDs follow the timestamp rule; and the final PDF is duplex-safe with exam -> answer sheet -> key.
