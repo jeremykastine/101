@@ -58,8 +58,12 @@ Every exam version must include a version-specific student answer sheet.
 - Do not repeat problem statements.
 - Include the version identifier, student-name area, question numbers, concise part labels, point values, and appropriately sized answer lines/boxes.
 - Follow the actual randomized presentation order and numbering of that exam version.
-- Each main question must visibly total 10 points, and each subpart must show its point value.
+- Each main question must visibly total 10 points. For a question with multiple parts, each part must show its own point value and the parts must sum to 10.
+- **Do not create a redundant subpart for a single-part question.** If the entire question has only one response worth 10 points, show the question once with `10 points`; do not place a second `10 points` label beneath it or invent an `A`, `1`, or other part label solely for scoring.
 - Concise labels such as `Domain`, `Range`, `Vertical asymptote`, `Choice`, `Graph I`, and `Solutions` are appropriate.
+- For multipart rows labeled `A`, `B`, `C`, etc., `1`, `2`, `3`, etc., or similar part markers, the writing line should run essentially the **full usable width of the row**: begin immediately after the left-side part label/descriptor and continue all the way to just before the right-aligned point value. Do not leave a short isolated blank near the middle of the row.
+- The same full-width-line rule applies between successive part labels and between different point values so that it is visually obvious which line belongs to which part.
+- Keep the left part labels aligned in a narrow column and the point values aligned in a narrow right column, with the answer line filling the space between them.
 
 ### Paired answer key
 
@@ -74,7 +78,7 @@ Every exam version must also include a paired answer key.
 
 The student answer sheet and answer key must come from the **same layout source/template**.
 
-- Their page count, page breaks, question placement, line lengths, row heights, and spacing must match.
+- Their page count, page breaks, question placement, line lengths, row heights, spacing, left-side part labels, full-width answer lines, and right-side point-value alignment must match.
 - Preferred method: typeset the complete answer key and create the student version from the same source with answer text hidden while preserving dimensions. White answer text is acceptable.
 - Do not independently recreate the blank answer sheet after designing the key.
 - Visually verify page-for-page alignment before delivery.
@@ -302,3 +306,5 @@ Before finalizing any version, verify:
 28. answer sheet is exactly 2 pages and answer key is exactly 2 pages;
 29. version identifier uses `YYYYMMDDHHMM` rather than a lettered version label;
 30. if multiple versions are generated in one batch, they use the same timestamp plus `.1`, `.2`, `.3`, etc. suffixes.
+31. multipart answer-sheet/key rows use full-width response lines from the part label to just before the right-aligned point value;
+32. single-part 10-point questions are not redundantly broken into a one-item subpart with a second 10-point label.
