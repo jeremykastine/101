@@ -3,6 +3,14 @@
 ## Purpose
 Standing specification for generating MATH 101 (College Algebra) final exams. Use this unless a later instruction explicitly changes a rule.
 
+## Instruction hierarchy and verification
+- Follow the problem-type specification first, then the global rules in this document.
+- A specific problem-type requirement overrides a general presentation preference when the two conflict.
+- Do not silently add assessed skills that are not named in the applicable problem type.
+- Generate first, verify second, and replace any item that fails a required constraint.
+- Work every problem completely before presenting it. Verify algebra, domains, intercepts, roots, graphs, and final simplifications.
+- A new version must use genuinely new numerical values, expressions, or graphs where applicable; merely reordering the same questions does not create a new version.
+
 ## Global structure
 - Exactly **10 main questions**, one from each problem type below.
 - **100 points total; 10 points per main question.** A question may have multiple parts, but all parts stay on one topic.
@@ -15,26 +23,31 @@ Standing specification for generating MATH 101 (College Algebra) final exams. Us
 - Do not use lettered labels such as Version A/B.
 - Single version: `YYYYMMDDHHMM` using the user's local time, 24-hour clock, nearest minute, no punctuation.
 - Batch versions: same timestamp plus `.1`, `.2`, `.3`, etc.
-- Use the same identifier on the exam, answer sheet, answer key, and filename when practical.
+- Use the same identifier on the exam booklet, student answer sheet, answer key, and filename when practical.
 
-## Exam booklet
+## Standard presentation and output conventions
+
+### Exam booklet
 - Do **not** print point values in the exam booklet unless specifically requested.
 - Keep prompts compact. Short feature lists should usually be written in one sentence rather than one item per line.
 - Keep vertical subparts only when they represent meaningfully different procedures or a deliberate sequence of work.
 - Multiple-choice options may remain vertical when clearer.
+- Use conventional mathematical notation, clear grouping symbols, and unambiguous subtraction signs.
+- Provide adequate workspace where the problem itself requires drawing, graphing, or substantial handwritten work, but do not add unnecessary vertical whitespace merely to separate short prompts.
 
-## Student answer sheet and answer key
+### Student answer sheet and answer key
 Every version must include a student answer sheet and a paired answer key.
 
-### Content and scoring
+#### Content and scoring
 - The answer sheet contains **no problem statements**.
 - Include version identifier, **student name**, question numbers, concise part labels, point values, and answer lines/boxes.
 - **Do not include a section/course-section field.** Only one section is being taught.
 - Follow the actual randomized numbering/order of that version.
 - Each main question visibly totals 10 points. Multipart point values sum to 10.
 - For a single-part 10-point question, show the question once with `10 points`; do not invent a redundant A/1 subpart or second 10-point label.
+- Point weights should reflect the mathematical work expected rather than merely the number of blanks.
 
-### Row geometry
+#### Row geometry
 - Left part labels/descriptors occupy a narrow left column; point values occupy a narrow right column.
 - For multipart rows, the writing line runs essentially the **full width between the left label and right point value**.
 - Do not leave a short isolated blank in the middle of a row.
@@ -44,24 +57,31 @@ Every version must include a student answer sheet and a paired answer key.
 - No dashed rule after the final part, and none at all for a single-part question.
 - Never stack a dashed rule and solid question rule beneath the same final response area.
 
-### Key-first matched layout
+#### Key-first matched layout
 - Build the **answer key first** as the canonical layout.
 - The student sheet must be generated from the same source/template, with identical page breaks, row heights, spacing, line lengths, labels, and point-value positions.
-- Preferred method: hide the answer text (e.g. white text) while preserving its dimensions.
-- The key is a concise grading reference, not a worked-solutions document unless separately requested.
+- Preferred method: hide the answer text (for example, white text) while preserving its dimensions.
+- The default key is a concise grading reference rather than a worked-solutions document. Worked solutions or extended instructor notes are included only when separately requested.
+
+### Optional compliance/audit material
+- Do **not** include a compliance report, generation audit, or similar metadata automatically.
+- The generating system must still perform the full internal verification checklist every time.
+- If a compliance report or audit is explicitly requested, provide it as a separate instructor-only section after the answer key and keep it off all student-facing pages.
 
 ## Combined duplex-safe deliverable
 By default, deliver **one combined PDF per version** in this order:
 1. Exam booklet
 2. Student answer sheet
 3. Answer key
+4. Optional compliance/audit section only when explicitly requested
 
 Printing rules:
-- Each section begins on an **odd-numbered PDF page**, i.e. the front of a fresh duplex sheet.
-- Insert a blank padding page after the exam if needed.
+- Each included section begins on an **odd-numbered PDF page**, i.e. the front of a fresh duplex sheet.
+- Insert blank padding pages wherever needed so one section never begins on the back of the preceding section.
 - Student answer sheet is exactly **2 PDF pages** (one sheet front/back).
 - Answer key is exactly **2 PDF pages** and geometrically identical to the answer sheet.
-- Add padding if ever needed so the key also starts on a fresh front side.
+- Add padding if ever needed so the key or any requested audit section also starts on a fresh front side.
+- If a request explicitly asks for separate files or a different packaging format, follow that request instead.
 
 ---
 
@@ -150,4 +170,4 @@ Solve algebraically by substitution/equivalent method, normally with two interse
 The final emphasizes function-centered College Algebra. Quadratic equations and ordinary linear systems are prerequisite material rather than dedicated final topics, though quadratic solving may appear as a supporting skill. Domain/range are embedded in function-analysis questions.
 
 ## Generation checklist
-Before finalizing, verify all 10 problem types appear once; default order is randomized; Question 10 probabilities/subtype probabilities are respected; four-function-calculator limit is honored; graphs are legible; exponential graph labels follow the A–D solid-curve rule; exact values are used where possible; Q4 uses RRT + limited testing + long division + quadratic formula; Q5 uses approved Form A/B; log-property items genuinely benefit from the properties; whole-exam difficulty is balanced; scoring totals 100; exam booklet omits points; answer sheet/key are key-first matched layouts with full-width response lines; solid rules separate questions and dashed rules only separate internal parts; no redundant separators or single-part sublabels; **no section field appears**; version IDs follow the timestamp rule; and the final PDF is duplex-safe with exam -> answer sheet -> key.
+Before finalizing, verify all 10 problem types appear once; default order is randomized; Question 10 probabilities/subtype probabilities are respected; four-function-calculator limit is honored; graphs are legible; exponential graph labels follow the A–D solid-curve rule; exact values are used where possible; Q4 uses RRT + limited testing + long division + quadratic formula; Q5 uses approved Form A/B; log-property items genuinely benefit from the properties; whole-exam difficulty is balanced; scoring totals 100; exam booklet omits points; answer sheet/key are key-first matched layouts with full-width response lines; solid rules separate questions and dashed rules only separate internal parts; no redundant separators or single-part sublabels; **no section field appears**; version IDs follow the timestamp rule; internal verification has been completed; optional compliance/audit material is omitted unless requested; and the final PDF is duplex-safe with exam -> answer sheet -> key.
