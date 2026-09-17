@@ -71,6 +71,24 @@ The student answer sheet and answer key must come from the **same layout source/
 - Visually verify page-for-page alignment before delivery.
 - When multiple exam versions are generated, each version receives its own matching answer sheet/key and clear version identifier.
 
+### Combined deliverable and duplex-safe printing
+
+By default, deliver each exam version as **one combined PDF**, not as three separate PDFs. The combined PDF must contain these three sections in this order:
+
+1. **Exam booklet**
+2. **Student answer sheet**
+3. **Answer key**
+
+The PDF must be laid out for ordinary two-sided/duplex printing so that no section begins on the back side of the final sheet of the preceding section.
+
+- Each of the three sections must begin on an **odd-numbered PDF page**, i.e. the front side of a fresh physical sheet when printed duplex starting with page 1 as a front side.
+- If the exam booklet has an odd number of pages, insert a completely blank padding page after it so the student answer sheet begins on a new sheet.
+- The student answer sheet should occupy **exactly one physical sheet, front and back (2 PDF pages)**. Keep its layout compact enough to preserve this two-page requirement.
+- The answer key should likewise occupy **exactly one physical sheet, front and back (2 PDF pages)** and must remain geometrically identical to the answer sheet as specified above.
+- Because the answer sheet and key are each two pages, the answer key will naturally begin on a new front side when the answer sheet begins on a front side. If any future layout change would alter this, add blank padding as needed so the key still begins on an odd-numbered page.
+- Padding pages must be truly blank or unobtrusively marked as intentionally blank; they must not contain exam, answer-sheet, or answer-key content.
+- When multiple versions are generated, create one duplex-safe combined PDF per version unless the user explicitly requests a different packaging format.
+
 ---
 
 # Required Problem Types
@@ -268,4 +286,8 @@ Before finalizing any version, verify:
 21. version-specific answer sheet and key are generated from the same layout template;
 22. answer sheet contains no problem statements;
 23. key and answer sheet have matching page count, page breaks, spacing, and answer-line geometry;
-24. exam, answer sheet, and key share the same version identifier.
+24. exam, answer sheet, and key share the same version identifier;
+25. final delivery is one combined PDF in the order exam -> answer sheet -> answer key;
+26. each section begins on an odd-numbered PDF page/front side of a fresh duplex sheet;
+27. blank padding pages are inserted wherever needed to prevent one section from printing on the back of another;
+28. answer sheet is exactly 2 pages and answer key is exactly 2 pages.
