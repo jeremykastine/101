@@ -14,6 +14,15 @@ This is the standing specification for generating MATH 101 (College Algebra) fin
 - Students may use a **basic four-function calculator only**. Scientific, graphing, CAS, and calculator-app functions are not intended to be used.
 - Problems should favor exact answers and clean arithmetic. Do not require logarithm approximations or calculator features beyond four-function arithmetic.
 
+## Version identifiers
+
+- Do not use generic labels such as `Version A`, `Version B`, etc.
+- A normally generated single exam version should use a **12-digit timestamp identifier** in the format `YYYYMMDDHHMM`, using the user's local date and time and a 24-hour clock. The timestamp is encoded to the nearest minute and contains **no punctuation**.
+- Example: September 17, 2026 at 4:22 PM becomes `202609171622`.
+- Display this identifier wherever the version identifier appears, including the exam booklet, student answer sheet, answer key, and combined-PDF labeling/filename when practical.
+- If multiple exam versions are generated together from the same request, use the same 12-digit base timestamp and append sequential suffixes `.1`, `.2`, `.3`, and so on. Example: `202609171622.1`, `202609171622.2`, `202609171622.3`.
+- The base timestamp itself remains punctuation-free; the decimal-style suffix is used only to distinguish multiple versions generated as one batch.
+
 ## Difficulty balancing across randomized versions
 
 Randomization will cause small natural differences in item difficulty. Balance difficulty at the **whole-exam level**.
@@ -290,4 +299,6 @@ Before finalizing any version, verify:
 25. final delivery is one combined PDF in the order exam -> answer sheet -> answer key;
 26. each section begins on an odd-numbered PDF page/front side of a fresh duplex sheet;
 27. blank padding pages are inserted wherever needed to prevent one section from printing on the back of another;
-28. answer sheet is exactly 2 pages and answer key is exactly 2 pages.
+28. answer sheet is exactly 2 pages and answer key is exactly 2 pages;
+29. version identifier uses `YYYYMMDDHHMM` rather than a lettered version label;
+30. if multiple versions are generated in one batch, they use the same timestamp plus `.1`, `.2`, `.3`, etc. suffixes.
