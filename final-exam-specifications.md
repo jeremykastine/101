@@ -64,6 +64,12 @@ Every exam version must include a version-specific student answer sheet.
 - For multipart rows labeled `A`, `B`, `C`, etc., `1`, `2`, `3`, etc., or similar part markers, the writing line should run essentially the **full usable width of the row**: begin immediately after the left-side part label/descriptor and continue all the way to just before the right-aligned point value. Do not leave a short isolated blank near the middle of the row.
 - The same full-width-line rule applies between successive part labels and between different point values so that it is visually obvious which line belongs to which part.
 - Keep the left part labels aligned in a narrow column and the point values aligned in a narrow right column, with the answer line filling the space between them.
+- Use **solid horizontal separator lines only between main questions**.
+- Use **dashed horizontal separator lines only between successive parts within the same main question** so part boundaries are visually distinct from question boundaries.
+- A dashed part separator belongs **between** parts, not after them: a two-part question has one dashed separator, a three-part question has two, a four-part question has three, and so on.
+- Do **not** draw a dashed separator below the final part of a multipart question; the solid separator for the next main question already provides the lower boundary.
+- For a single-part question, do **not** draw any internal dashed separator at all; use only the main-question boundary structure.
+- Avoid stacked or duplicate horizontal rules. There should never be both a dashed internal-part rule and a solid main-question rule immediately beneath the same final response area.
 
 ### Paired answer key
 
@@ -306,5 +312,7 @@ Before finalizing any version, verify:
 28. answer sheet is exactly 2 pages and answer key is exactly 2 pages;
 29. version identifier uses `YYYYMMDDHHMM` rather than a lettered version label;
 30. if multiple versions are generated in one batch, they use the same timestamp plus `.1`, `.2`, `.3`, etc. suffixes.
-31. multipart answer-sheet/key rows use full-width response lines from the part label to just before the right-aligned point value;
-32. single-part 10-point questions are not redundantly broken into a one-item subpart with a second 10-point label.
+31. answer-sheet/key separators use solid rules between main questions and dashed rules only between internal parts;
+32. no dashed separator appears after the final part or in a single-part question, and no duplicate/stacked horizontal rules remain.
+33. multipart answer-sheet/key rows use full-width response lines from the part label to just before the right-aligned point value;
+34. single-part 10-point questions are not redundantly broken into a one-item subpart with a second 10-point label.
