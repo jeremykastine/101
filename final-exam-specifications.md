@@ -1,4 +1,4 @@
-# MATH 101 Final Exam Specifications
+# MATH 101 Assessment Specifications
 
 ## Purpose
 Standing specification for generating MATH 101 (College Algebra) assessments and their practice versions, including practice diagnostics, diagnostics, practice finals, finals, and comparable generated tests. Use this unless a later instruction explicitly changes a rule.
@@ -42,7 +42,7 @@ Unless a rule is explicitly limited to a particular assessment, the presentation
 - Natural unused space at the end of a page is acceptable, but do not deliberately create blank regions as working space.
 
 ### Student answer sheet and answer key
-Every version must include a student answer sheet and a paired answer key.
+When a student answer sheet is included, it must be paired with a geometrically matched answer key. A practice version may omit the student answer sheet when explicitly requested; the remaining layout rules still apply to any answer key that is produced.
 
 #### Content and scoring
 - The answer sheet contains **no problem statements**.
