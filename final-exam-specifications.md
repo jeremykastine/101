@@ -1,7 +1,9 @@
 # MATH 101 Final Exam Specifications
 
 ## Purpose
-Standing specification for generating MATH 101 (College Algebra) final exams. Use this unless a later instruction explicitly changes a rule.
+Standing specification for generating MATH 101 (College Algebra) assessments and their practice versions, including practice diagnostics, diagnostics, practice finals, finals, and comparable generated tests. Use this unless a later instruction explicitly changes a rule.
+
+Unless a rule is explicitly limited to a particular assessment, the presentation, directions, answer-sheet, answer-key, verification, and packaging conventions in this document apply equally to practice and non-practice versions and to diagnostics and finals.
 
 ## Instruction hierarchy and verification
 - Follow the problem-type specification first, then the global rules in this document.
@@ -33,34 +35,42 @@ Standing specification for generating MATH 101 (College Algebra) final exams. Us
 - Keep vertical subparts only when they represent meaningfully different procedures or a deliberate sequence of work.
 - Multiple-choice options may remain vertical when clearer.
 - Use conventional mathematical notation, clear grouping symbols, and unambiguous subtraction signs.
-- Provide adequate workspace where the problem itself requires drawing, graphing, or substantial handwritten work, but do not add unnecessary vertical whitespace merely to separate short prompts.
+- Do **not** reserve or insert workspace for students to show work in the exam booklet. The booklet should be compact and content-flow-driven rather than spaced as a worksheet.
+- Standard directions must explicitly tell students to **complete and show all work on a separate sheet of paper**.
+- Continue to tell students to give exact answers unless a problem explicitly requests an approximation.
+- When a separate student answer sheet is included, directions must tell students to record final answers on that sheet. If a practice version intentionally has no answer sheet, omit only that answer-sheet clause.
+- Natural unused space at the end of a page is acceptable, but do not deliberately create blank regions as working space.
 
 ### Student answer sheet and answer key
 Every version must include a student answer sheet and a paired answer key.
 
 #### Content and scoring
 - The answer sheet contains **no problem statements**.
-- Include version identifier, **student name**, question numbers, concise part labels, point values, and answer lines/boxes.
+- Include version identifier, **student name**, question numbers, concise part labels, and point values.
 - **Do not include a section/course-section field.** Only one section is being taught.
 - Follow the actual randomized numbering/order of that version.
 - Each main question visibly totals 10 points. Multipart point values sum to 10.
 - For a single-part 10-point question, show the question once with `10 points`; do not invent a redundant A/1 subpart or second 10-point label.
 - Point weights should reflect the mathematical work expected rather than merely the number of blanks.
+- Do not add unnecessary writing space. The answer sheet is for concise final answers, not for showing work.
+- Whenever a student answer sheet is included, it must fit on **one physical sheet front/back**, i.e. exactly **2 PDF pages**, unless a later instruction explicitly overrides this.
 
 #### Row geometry
 - Left part labels/descriptors occupy a narrow left column; point values occupy a narrow right column.
-- For multipart rows, the writing line runs essentially the **full width between the left label and right point value**.
-- Do not leave a short isolated blank in the middle of a row.
+- The middle of each response row is an **open answer area**. Do **not** draw a separate writing/baseline inside that area.
 - Use **solid horizontal rules only between main questions**.
-- Use **dashed horizontal rules only between successive parts of the same question**.
-- Dashed rules occur only *between* parts: 2 parts -> 1 dashed rule; 3 parts -> 2; 4 parts -> 3.
-- No dashed rule after the final part, and none at all for a single-part question.
-- Never stack a dashed rule and solid question rule beneath the same final response area.
+- Use a light **dotted/dashed horizontal separator only between successive parts of the same question**.
+- The separator itself defines the boundary of the answer area: there must never be both a part separator and an additional answer line within the same space.
+- Dotted/dashed separators occur only *between* parts: 2 parts -> 1 separator; 3 parts -> 2; 4 parts -> 3.
+- No dotted/dashed separator after the final part, and none at all for a single-part question.
+- Never stack a dotted/dashed part separator and a solid question separator beneath the same final response area.
+- Keep row heights compact while leaving enough open space for a concise final answer.
 
 #### Key-first matched layout
 - Build the **answer key first** as the canonical layout.
-- The student sheet must be generated from the same source/template, with identical page breaks, row heights, spacing, line lengths, labels, and point-value positions.
-- Preferred method: hide the answer text (for example, white text) while preserving its dimensions.
+- The student sheet and answer key must be generated from the same source/template, with identical page breaks, row heights, spacing, separator positions, labels, and point-value positions.
+- The answer key places the answer text in the same open middle area that is blank on the student sheet.
+- The student PDF must contain **no answer text, including hidden white/transparent answer text**. Preserve matching geometry with fixed row dimensions or equivalent shared-template layout rather than embedding hidden answers.
 - The default key is a concise grading reference rather than a worked-solutions document. Worked solutions or extended instructor notes are included only when separately requested.
 
 ### Optional compliance/audit material
@@ -78,8 +88,8 @@ By default, deliver **one combined PDF per version** in this order:
 Printing rules:
 - Each included section begins on an **odd-numbered PDF page**, i.e. the front of a fresh duplex sheet.
 - Insert blank padding pages wherever needed so one section never begins on the back of the preceding section.
-- Student answer sheet is exactly **2 PDF pages** (one sheet front/back).
-- Answer key is exactly **2 PDF pages** and geometrically identical to the answer sheet.
+- Whenever included, the student answer sheet is exactly **2 PDF pages** (one sheet front/back).
+- The answer key is exactly **2 PDF pages** and geometrically identical to the answer sheet.
 - Add padding if ever needed so the key or any requested audit section also starts on a fresh front side.
 - If a request explicitly asks for separate files or a different packaging format, follow that request instead.
 
@@ -170,4 +180,4 @@ Solve algebraically by substitution/equivalent method, normally with two interse
 The final emphasizes function-centered College Algebra. Quadratic equations and ordinary linear systems are prerequisite material rather than dedicated final topics, though quadratic solving may appear as a supporting skill. Domain/range are embedded in function-analysis questions.
 
 ## Generation checklist
-Before finalizing, verify all 10 problem types appear once; default order is randomized; Question 10 probabilities/subtype probabilities are respected; four-function-calculator limit is honored; graphs are legible; exponential graph labels follow the A–D solid-curve rule; exact values are used where possible; Q4 uses RRT + limited testing + long division + quadratic formula; Q5 uses approved Form A/B; log-property items genuinely benefit from the properties; whole-exam difficulty is balanced; scoring totals 100; exam booklet omits points; answer sheet/key are key-first matched layouts with full-width response lines; solid rules separate questions and dashed rules only separate internal parts; no redundant separators or single-part sublabels; **no section field appears**; version IDs follow the timestamp rule; internal verification has been completed; optional compliance/audit material is omitted unless requested; and the final PDF is duplex-safe with exam -> answer sheet -> key.
+Before finalizing, verify all 10 problem types appear once; default order is randomized; Question 10 probabilities/subtype probabilities are respected; four-function-calculator limit is honored; graphs are legible; exponential graph labels follow the A–D solid-curve rule; exact values are used where possible; Q4 uses RRT + limited testing + long division + quadratic formula; Q5 uses approved Form A/B; log-property items genuinely benefit from the properties; whole-exam difficulty is balanced; scoring totals 100; exam booklet omits points; answer sheet/key are key-first matched layouts with open response areas and **no internal answer baselines**; solid rules separate questions and light dotted/dashed rules only separate internal parts; no redundant separators or single-part sublabels; **no section field appears**; version IDs follow the timestamp rule; internal verification has been completed; optional compliance/audit material is omitted unless requested; and the final PDF is duplex-safe with exam -> answer sheet -> key.
