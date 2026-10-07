@@ -1,4 +1,12 @@
-> **Moved to Teaching.** The active course materials are now in [teaching/101](https://github.com/jeremykastine/teaching/tree/main/101). Open the [course website](https://jeremykastine.github.io/teaching/101/). Make future updates in Teaching; this repository is retained for its original history.
+# RETIRED — DO NOT EDIT THIS REPOSITORY
+
+All future course edits must be made in [jeremykastine/teaching](https://github.com/jeremykastine/teaching), under [101/](https://github.com/jeremykastine/teaching/tree/main/101). This standalone repository is retained only for its history and existing redirects. Do not update its course files, PDFs, specifications, or build scripts.
+
+[Open the active course website](https://jeremykastine.github.io/teaching/101/).
+
+The documentation below describes the historical snapshot. Any editing or rebuilding instructions apply to the corresponding folder in Teaching.
+
+---
 
 # MATH 101 course materials
 
