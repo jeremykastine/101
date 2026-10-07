@@ -1,3 +1,5 @@
+> **Moved to Teaching.** The active course materials are now in [teaching/101](https://github.com/jeremykastine/teaching/tree/main/101). Open the [course website](https://jeremykastine.github.io/teaching/101/). Make future updates in Teaching; this repository is retained for its original history.
+
 # MATH 101 course materials
 
 College Algebra lecture slides aligned to **OpenStax College Algebra 2e**.
